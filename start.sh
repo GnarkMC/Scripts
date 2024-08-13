@@ -1,4 +1,4 @@
-#!/bin/bash | https://github.com/MithrilMC/Scripts/blob/main/start.sh
+# https://github.com/MithrilMC/Scripts/blob/main/start.sh
 
 # Search for the latest Purpur or Velocity JAR file
 latest_purpur=$(ls purpur-1.21.1-*.jar | sort -V | tail -n 1)
