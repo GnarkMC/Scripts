@@ -17,10 +17,6 @@ if [ -n "$latest_purpur" ]; then
     java_opts=(
       "-Xms${purpur_heap_size}M"             # Initial heap size for Purpur
       "-Xmx${purpur_heap_size}M"             # Maximum heap size for Purpur
-      "-XX:+UseZGC"                          # Use Z Garbage Collector
-      "-XX:+UnlockExperimentalVMOptions"     # Unlock experimental VM options
-      "-XX:+AlwaysPreTouch"                  # Pre-touch memory to improve performance
-      "-XX:MaxGCPauseMillis=200"             # Set maximum GC pause time
     )
 
 elif [ -n "$latest_velocity" ]; then
