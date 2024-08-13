@@ -2,7 +2,10 @@
 
 > This repository is a mnemonic to store several scripts that can go from about any kind of use related to Minecraft.
 
-## Scripts:
+# Scripts:
 
-- start.sh
-  - Universal start script for Purpur & Velocity.
+## start.sh
+Universal start script for Purpur & Velocity.
+
+## .bashrc
+.bashrc config for Linux.
