@@ -1,20 +1,21 @@
-# https://github.com/GnarkMC/Scripts/blob/main/start-server.sh
+#!/bin/bash
 
 # User-configurable options
-BASE_NAME="DivineMC-1.21.1-" # Set the base name of the JAR file (before the version number)
-HEAP_SIZE=16384              # Set heap size for the server (megabytes)
-JAVA_OPTS=(                  # Java command-line options
-    "-Xms${HEAP_SIZE}M"      # Initial heap size
-    "-Xmx${HEAP_SIZE}M"      # Maximum heap size
+BASE_NAME="paper-1.21.3-74"
+HEAP_SIZE=16384
+JAVA_OPTS=(
+    "-Xms${HEAP_SIZE}M"
+    "-Xmx${HEAP_SIZE}M"
+    "-DPaper.IgnoreJavaVersion=true"
 )
 
 # Find the JAR file with the highest version number
 NAME=$(ls ${BASE_NAME}*.jar 2>/dev/null | sort -V | tail -n 1)
 
-if [ -n "$NAME" ]; then # Check if any JAR file was found
+if [ -n "$NAME" ]; then
     echo "Using JAR file: $NAME"
     java "${JAVA_OPTS[@]}" -jar "$NAME" --nogui
-else # Exit if no JAR file is found
+else
     echo "No relevant JAR file found."
     exit 1
 fi
