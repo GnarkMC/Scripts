@@ -17,5 +17,6 @@ Bash file for Linux, currently offers:
 
 ## start-proxy.sh & start-server.sh
 Startup scripts for a Velocity instance and a Minecraft server.
-- Smart JAR, automatically finds the latest version
+- Smart JAR, automatically finds the latest version.
 - Easy to configure, all changeable keys are at the top.
+- Linux (.sh) and Windows (.bat) versions available.
